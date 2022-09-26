@@ -1,10 +1,9 @@
 export const firebaseConfig = {
-    apiKey: "AIzaSyDcV3REqv2ArWPkLnzOes2DGjTlLnfQBGI",
-    authDomain: "online-food-e5883.firebaseapp.com",
-    databaseURL: "https://online-food-e5883-default-rtdb.firebaseio.com",
-    projectId: "online-food-e5883",
-    storageBucket: "online-food-e5883.appspot.com",
-    messagingSenderId: "627140160223",
-    appId: "1:627140160223:web:b7181b4494a15ac117176a",
-    measurementId: "G-BBSRCKKHW1"
+  apiKey: "AIzaSyBAmeIdhHc0R5ib4JrvA-Kxt-jRYMkcI94",
+  authDomain: "foody-32055.firebaseapp.com",
+  projectId: "foody-32055",
+  storageBucket: "foody-32055.appspot.com",
+  messagingSenderId: "833996981656",
+  appId: "1:833996981656:web:fe3ba0ccf925fb577217ed",
+  measurementId: "G-XTT704Y0MS",
 };

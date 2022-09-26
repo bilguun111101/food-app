@@ -40,9 +40,9 @@ const SignInSide = () => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     if (
-      !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
-        data.get("email")
-      ) ||
+      // !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
+      // data.get("email")
+      // ) ||
       !data.get("password")
     ) {
       Notification.requestPermission().then((something) => {
@@ -61,7 +61,6 @@ const SignInSide = () => {
 
     signInWithEmailAndPassword(auth, data.get("email"), data.get("password"))
       .then((userCredential) => {
-        const user = userCredential.user;
         const userInformation = _.filter(userData, {
           email: data.get("email"),
         });
@@ -71,8 +70,6 @@ const SignInSide = () => {
         navigate("/home");
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
         setSignBool(false);
       });
   };

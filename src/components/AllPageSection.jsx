@@ -1,13 +1,10 @@
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PersistentDrawerLeft from "./Navbar/Navbar";
-import { lightTheme, darkTheme } from "../themes";
 import { useSettingsContext } from "../Settings";
 import SignInSide from "./SignIn/SignIn";
-import { Button } from "@mui/material";
 import MenuSection from "./Home/Menu";
 import SignUp from "./SignUp/Signup";
-import _ from "lodash";
 
 const theme = createTheme({
   palette: {

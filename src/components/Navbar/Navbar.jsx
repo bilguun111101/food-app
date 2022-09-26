@@ -29,7 +29,7 @@ import { useSettingsContext } from "../../Settings";
 
 import { MaterialUISwitch } from "./NavbarStyle";
 
-const drawerWidth = 240;
+// const drawerWidth = 240;
 
 export default function PersistentDrawerLeft() {
   const theme = useTheme();
