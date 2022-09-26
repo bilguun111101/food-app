@@ -34,7 +34,7 @@ import { MaterialUISwitch } from "./NavbarStyle";
 export default function PersistentDrawerLeft() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
-  const { signBool } = useSignContext();
+  const { signBool, setSignBool } = useSignContext();
   const { title } = useTitleContext();
   const { setColorChange } = useSettingsContext();
 
@@ -101,13 +101,14 @@ export default function PersistentDrawerLeft() {
           ))}
         </List>
         <List sx={styles.leftNavbarStyle}>
-          {signBtns.map((el, idx) => {
+          {/* {signBtns.map((el, idx) => {
             if (signBool) {
-              if (idx === 0) return <NavbarBtn key={idx} el={el} index={idx} />;
+              if (idx === 0) return <NavbarBtn key={idx} el={el} index={idx} onClick={() => setSignBool(false)} />;
             } else {
               if (idx === 1) return <NavbarBtn key={idx} el={el} index={idx} />;
             }
-          })}
+          })} */}
+          {signBool ? <NavbarBtn el={signBtns[0]}/> : <NavbarBtn el={signBtns[1]}/>}
         </List>
       </Drawer>
     </Box>
