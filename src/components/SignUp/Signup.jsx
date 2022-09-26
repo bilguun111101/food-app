@@ -22,8 +22,11 @@ const styles = {
     color: theme.palette.primary.text,
   }),
   backgroundColor: (theme) => ({
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: theme.palette.primary.text,
   }),
+  backgroundColorWhite: theme => ({
+    backgroundColor: theme.palette.primary.text,
+  })
 };
 
 const SignUp = () => {
@@ -100,7 +103,7 @@ const SignUp = () => {
         <Typography
           component="h1"
           variant="h5"
-          sx={{ ...styles.signIpBtn, ...styles.backgroundColor }}
+          sx={{ ...styles.signIpBtn }}
         >
           Sign up
         </Typography>
@@ -114,7 +117,8 @@ const SignUp = () => {
                 fullWidth
                 id="firstName"
                 label="First Name"
-                sx={{ ...styles.signIpBtn, ...styles.backgroundColor }}
+                sx={{ ...styles.signIpBtn, }} 
+                color="primary"
                 autoFocus
               />
             </Grid>
