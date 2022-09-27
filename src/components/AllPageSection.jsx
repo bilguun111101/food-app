@@ -5,6 +5,7 @@ import { useSettingsContext } from "../Settings";
 import SignInSide from "./SignIn/SignIn";
 import MenuSection from "./Home/Menu";
 import SignUp from "./SignUp/Signup";
+import { useSignContext } from "../SignContext";
 
 const theme = createTheme({
   palette: {
@@ -27,11 +28,12 @@ const secTheme = createTheme({
 
 const AllPageSection = () => {
   const { colorChange } = useSettingsContext();
+  const { signBool } = useSignContext();
 
   return (
     <ThemeProvider theme={colorChange ? theme : secTheme}>
       <BrowserRouter>
-        <PersistentDrawerLeft />
+        {signBool && <PersistentDrawerLeft />}
         <Routes>
           <Route path="/" element={<SignInSide />} />
           <Route path="/signUp" element={<SignUp />} />
