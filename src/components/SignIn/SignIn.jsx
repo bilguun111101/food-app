@@ -12,8 +12,8 @@ import Paper from "@mui/material/Paper";
 import { Copyright } from "./Copyright";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
+import { auth, db } from "../../firebase";
 import Box from "@mui/material/Box";
-import { auth } from "../../firebase";
 import _ from "lodash";
 
 // some contextes import ^^^^^^^^^^
@@ -40,9 +40,9 @@ const SignInSide = () => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     if (
-      // !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
-      // data.get("email")
-      // ) ||
+      !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
+      data.get("email")
+      ) ||
       !data.get("password")
     ) {
       Notification.requestPermission().then((something) => {

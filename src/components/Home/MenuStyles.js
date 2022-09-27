@@ -35,15 +35,53 @@ export const styles = {
   closeCardSection: theme => ({
     gap: "1em",
     width: "100%",
-    height: "40vh",
+    height: "50vh",
     padding: "1em",
     display: "flex",
     overflow: "scroll",
+    marginBottom: "2em",
     boxShadow: `0 0 3px ${theme.palette.primary.text}`,
   }),
   closeCard: theme => ({
-    width: "300px", 
-    height: "35vh", 
+    minWidth: "300px", 
+    height: "100%", 
     backgroundColor: "purple", 
+  }),
+  foodOrderSection: theme => ({
+    width: "100%",
+    height: "auto",
+    display: "flex",
+    justifyContent: "center",
+    flexWrap: "wrap",
+    gap: "1em"
+  }),
+  foodOrderCard: theme => ({
+    height: "30vh",
+    width: "300px",
+    minWidth: "200px",
+    position: "relative",
+    overflow: "none",
+    [theme.breakpoints.down("lg")]: {
+      width: "270px"
+    },
+    [theme.breakpoints.down("md")]: {
+      width: "240px"
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "200px",
+    }
+  }),
+  foodAvatar: theme => ({
+    width: "100%",
+    display: "flex",
+    justifyContent: "center",
+    position: "relative",
+  }),
+  foodImage: theme => ({
+    width: "150px",
+    height: "150px",
+    borderRadius: "50%", 
+    position: "absolute",
+    top: "-30px"
   })
 };

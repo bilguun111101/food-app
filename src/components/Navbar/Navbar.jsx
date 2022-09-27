@@ -28,6 +28,7 @@ import { useTitleContext } from "../../TitleContext";
 import { useSettingsContext } from "../../Settings";
 
 import { MaterialUISwitch } from "./NavbarStyle";
+import SignBtn from "./SignBtn/SignBtn";
 
 // const drawerWidth = 240;
 
@@ -101,14 +102,7 @@ export default function PersistentDrawerLeft() {
           ))}
         </List>
         <List sx={styles.leftNavbarStyle}>
-          {/* {signBtns.map((el, idx) => {
-            if (signBool) {
-              if (idx === 0) return <NavbarBtn key={idx} el={el} index={idx} onClick={() => setSignBool(false)} />;
-            } else {
-              if (idx === 1) return <NavbarBtn key={idx} el={el} index={idx} />;
-            }
-          })} */}
-          {signBool ? <NavbarBtn el={signBtns[0]}/> : <NavbarBtn el={signBtns[1]}/>}
+          {signBool ? <SignBtn el={signBtns[0]}/> : <SignBtn el={signBtns[1]}/>}
         </List>
       </Drawer>
     </Box>
