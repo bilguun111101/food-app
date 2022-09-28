@@ -16,13 +16,13 @@ const CloseFood = props => {
         image={propsy.image} 
         alt="green iguana" />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div" sx={styles.name}>
+        <Typography gutterBottom color="primary.text" variant="h5" component="div" sx={styles.name}>
           {propsy.name}
         </Typography>
       </CardContent>
       <CardActions sx={{ paddingLeft: "18px" }}>
         <Box sx={styles.bottom}>
-          <Typography component="div" variant="h7">
+          <Typography component="div" variant="h7" color="primary.text">
             {`₮${propsy.cost}`}
           </Typography>
           <Button sx={styles.btn} onClick={deleteThis}>
