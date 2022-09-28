@@ -1,4 +1,11 @@
 export const styles = {
+  loadingSection: theme => ({
+    width: "100vw", 
+    height: "100vh", 
+    display: "flex", 
+    alignItems: "center",
+    justifyContent: "center", 
+  }) ,
   menuPageSection: (theme) => ({
     width: "100vw",
     minHeight: "100vh",
@@ -17,7 +24,6 @@ export const styles = {
       width: "90%",
     },
     // backgroundColor: theme.palette.primary.main
-    backgroundColor: "#FFF",
     paddingTop: "1em",
   }),
 
@@ -54,34 +60,5 @@ export const styles = {
     justifyContent: "center",
     flexWrap: "wrap",
     gap: "1em"
-  }),
-  foodOrderCard: theme => ({
-    height: "30vh",
-    width: "300px",
-    minWidth: "200px",
-    position: "relative",
-    overflow: "none",
-    [theme.breakpoints.down("lg")]: {
-      width: "270px"
-    },
-    [theme.breakpoints.down("md")]: {
-      width: "240px"
-    },
-    [theme.breakpoints.down("sm")]: {
-      width: "200px",
-    }
-  }),
-  foodAvatar: theme => ({
-    width: "100%",
-    display: "flex",
-    justifyContent: "center",
-    position: "relative",
-  }),
-  foodImage: theme => ({
-    width: "150px",
-    height: "150px",
-    borderRadius: "50%", 
-    position: "absolute",
-    top: "-30px"
-  })
+}),
 };

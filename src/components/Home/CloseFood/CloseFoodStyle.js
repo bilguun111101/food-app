@@ -1,9 +1,11 @@
 export const styles = {
-    card: {
+    card: theme => ({
       minWidth: "200px",
       display: "flex",
       flexDirection: "column",
-    },
+      backgroundColor: "transparent",
+      border: `0 0 5px ${theme.palette.primary.text}`
+    }),
     name: {
       fontSize: "140%",
     },
